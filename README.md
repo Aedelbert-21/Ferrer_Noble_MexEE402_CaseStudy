@@ -32,7 +32,7 @@ you and what surprised you. Not what the library does, but what you understood.
 
 ## Errors we found
 
-**Chapter 6: Dealing with Outliers**
+## **Chapter 6: Dealing with Outliers**
 File: Ch6.ipynb
 Error 1: The Z-score method does not identify 100 as an outlier.
 Code cell 5
