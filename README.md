@@ -47,9 +47,12 @@ I learned how to apply different preprocessing techniques to the Titanic dataset
 
 ## **Chapter 6: Dealing with Outliers**
 
-### **File**: Ch6.ipynb
+### **File**
 
-### **Error 1**: The Z-score method does not identify 100 as an outlier.
+Ch6.ipynb
+
+### **Error 1**
+The Z-score method does not identify 100 as an outlier.
 
 ### **Code cell 5**
 
