@@ -32,11 +32,15 @@ you and what surprised you. Not what the library does, but what you understood.
 
 ## Errors we found
 
-## **Chapter 6: Dealing with Outliers**
+**Chapter 6: Dealing with Outliers**
+
 File: Ch6.ipynb
+
 Error 1: The Z-score method does not identify 100 as an outlier.
+
 Code cell 5
 The code uses np.abs(z_scores) > 3 to detect outliers. However, the Z-score for 100 is approximately 2.615, so the output is an empty array. This conflicts with the Markdown explanation that identifies 100 as a clear outlier.
+
 Correction
 Use the IQR method for this example, or adjust the Z-score threshold if justified. Do not assume that every outlier will have a Z-score above 3.
 The IQR method in code cell 11 correctly identifies 100 as an outlier. The main issue in this chapter is the difference between the Z-score result and the written explanation.
