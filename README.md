@@ -231,8 +231,8 @@ One additional concern is code cell 33, which uses kde=True to plot Age after co
 - The AI tools that used for this case study are Claude and ChatGPT; I've used these AI tools to verify the errors in each chapter that are stated in the Errors we found section in this repository.
 
 **Wendell**
-- I used ChatGPT to review the code outputs in each chapter and verify whether the results were correct. It helped me identify potential errors, inconsistencies between the code and explanations, and possible corrections to improve the accuracy of the notebooks. 
-
+- I used ChatGPT to check the code outputs in each chapter and verify whether the results were correct. It helped me identify possible errors, inconsistencies between the code and explanations, and ways to correct them. I also used it to reconstruct and improve some of my sentences so that my explanations would be clearer, more organized, and easier to understand. I reviewed the suggestions and used them as a guide when checking and improving my work.
+  
 ## References
 
 McKinney, W. (2021). Python for Data Analysis, 3rd ed. O'Reilly.
