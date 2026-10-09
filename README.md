@@ -34,7 +34,7 @@ you and what surprised you. Not what the library does, but what you understood.
 
 **Chapter 6: Dealing with Outliers**
 
-File: Ch6.ipynb
+**File**: Ch6.ipynb
 
 **Error 1**: The Z-score method does not identify 100 as an outlier.
 
