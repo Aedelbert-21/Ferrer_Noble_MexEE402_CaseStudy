@@ -37,8 +37,8 @@ There are real ones in there. Finding them earns points.
 
 ## Note on AI tools
 
-Say whether you used an AI tool, and what for. This is not a penalty.
-Hiding it is.
+**Noble**
+The AI tools that used for this case study are Claude and ChatGPT; I've used these AI tools to verify the errors in each chapter that are stated in the Errors we found section in this repository. 
 
 ## References
 
