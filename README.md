@@ -27,6 +27,26 @@ Batangas State University, Alangilan Campus
 
 ## What we learned
 
+## **Chapter 1: Introduction to Data Preprocessing**
+
+In this chapter, I learned that data needs to be prepared before it can be used for analysis. I used to think that I could just use a dataset right away, but I realized that the data might have problems that could affect the results. What surprised me is that preparing the data is just as important as analyzing it.
+
+## **Chapter 2: Understanding the Dataset**
+
+In this chapter, I learned how to check the contents of a dataset, including its columns, data types, and basic statistics. I realized that it is better to understand the data first before making changes to it. I was surprised by how much I could learn just by checking the dataset's information and summary.
+
+## **Chapter 3: Data Cleaning**
+
+In this chapter, I learned how to deal with missing values and check for duplicate data. I realized that cleaning a dataset is not just about deleting anything that looks wrong because I also need to think about how those changes will affect the data. What surprised me is that even a small mistake during cleaning can affect the results of the next steps.
+
+## **Chapter 4: Feature Engineering**
+
+In this chapter, I learned how to create new columns, group values into categories, and convert categorical data into numerical values. I found it interesting that I could get more information from the same dataset just by changing how the data is organized. I also learned that I need to understand how each transformation works so I can interpret the results correctly.
+
+## **Chapter 5: Feature Scaling**
+
+In this chapter, I learned that numerical features can have different ranges, which may affect some machine learning algorithms. I tried standardization and normalization and saw that they produce different values from the original data. What surprised me was that scaling does not mean the data stays the same; it changes the values into a different scale while keeping the relative information useful for the analysis.
+
 ## **Chapter 6: Dealing with Outliers**
 
 I learned that outliers are data points that differ significantly from most values in a dataset and can affect data analysis and machine learning models. I understood how to detect outliers using the Z-score and Interquartile Range (IQR) methods. What surprised me was that a value like 100 could stand out from the other values but still not be detected as an outlier by the Z-score method because its Z-score remained within the range of -3 to 3. I also learned that outliers can be handled through capping, flooring, log transformation, or removal, depending on the situation.
