@@ -183,7 +183,10 @@ plt.hist(data['Age'].dropna(),
 ### **Correction**
 
 Save a copy of the original Age column before discretization, then use that copy for the original histogram.
-Error 4: The age bins exclude age zero.
+
+### **Error 4**
+
+The age bins exclude age zero.
 
 ### **Code cell 21**
 
