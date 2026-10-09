@@ -52,6 +52,7 @@ I learned how to apply different preprocessing techniques to the Titanic dataset
 Ch6.ipynb
 
 ### **Error 1**
+
 The Z-score method does not identify 100 as an outlier.
 
 ### **Code cell 5**
@@ -65,15 +66,19 @@ The IQR method in code cell 11 correctly identifies 100 as an outlier. The main 
 
 ## **Chapter 7: Feature Selection**
 
-**File**: Ch7.ipynb
+### **File**
 
-**Error 1**: The target variable is included in the selected features.
+Ch7.ipynb
 
-**Code cells 9 and 10**
+### **Error 1**
+
+The target variable is included in the selected features.
+
+### **Code cells 9 and 10**
 
 The correlation calculation includes final grade, which is the target variable. Its correlation with itself is always 1.0, so the code includes it in relevant_features. This is misleading because the target is what the model should predict, not an input feature.
 
-**Correction**
+### **Correction**
 
 correlations = df_2.drop(columns='final grade').corrwith(
     df_2['final grade']
@@ -82,48 +87,58 @@ correlations = df_2.drop(columns='final grade').corrwith(
 relevant_features = correlations[correlations > 0.5]
 print(relevant_features)
 
-**Error 2**: The RFECV results are unreliable with this small dataset.
+### **Error 2**
 
-**Code cells 14 and 15**
+The RFECV results are unreliable with this small dataset.
+
+### **Code cells 14 and 15**
 
 The notebook uses five-fold cross-validation with only seven samples. Some validation folds contain too few samples to calculate the R² score reliably, which produces warnings. The selected feature may not generalize well.
 
-**Correction**
+### **Correction**
 
 Use a larger dataset. For this small demonstration, reduce the number of folds, while recognizing that the results will still be limited by the small sample size.
 The LassoCV example also uses only seven samples. Its selected features should be treated as illustrative rather than reliable evidence of feature importance.
 
 ## **Chapter 8: Constructing a Preprocessing Pipeline**
 
-**File**: Ch8.ipynb
+### **File**
 
-**Issue 1**: The pipeline processes only Age and Fare.
+Ch8.ipynb
 
-**Code cells 15 to 17**
+### **Issue 1**
+
+The pipeline processes only Age and Fare.
+
+### **Code cells 15 to 17**
 
 The ColumnTransformer applies imputation and scaling only to the Age and Fare columns. Other columns are dropped because remainder='drop' is the default setting. This is not a coding error if the goal is to demonstrate numerical preprocessing, but the transformed output does not contain the complete dataset.
 
-**Correction**
+### **Correction**
 
 If you want to retain other columns, define preprocessing for categorical features or use remainder='passthrough' when appropriate.
 Issue 2: The notebook assumes the uploaded file is named train.csv.
 
-**Code cell 5**
+### **Code cell 5**
 
 The line pd.read_csv('train.csv') will raise a FileNotFoundError if the uploaded file has a different name.
 
-**Correction**
+### **Correction**
 
 Confirm that the uploaded filename is train.csv, or use the filename returned by files.upload().
 The main preprocessing steps are valid for the selected numerical columns. The important limitation is that the output contains only the transformed Age and Fare features.
 
 ## **Chapter 9: Real-World Application: Data Preprocessing**
 
-File: Ch9.ipynb
+### **File**
 
-Error 1: The original Age column is overwritten during discretization.
+Ch9.ipynb
 
-Code cell 21
+### **Error 1**
+
+The original Age column is overwritten during discretization.
+
+### **Code cell 21**
 
 data['Age'] = pd.cut(
     data['Age'],
@@ -133,7 +148,7 @@ data['Age'] = pd.cut(
 
 This replaces the original numerical ages with categories. As a result, the notebook cannot use data['Age'] later to plot the original age distribution.
 
-Correction
+### **Correction**
 
 data['AgeGroup'] = pd.cut(
     data['Age'],
@@ -144,34 +159,34 @@ data['AgeGroup'] = pd.cut(
 Keep the original Age column and store the categories in a separate column.
 Error 2: The histogram uses the wrong column for the discretized ages.
 
-Code cell 29
+### **Code cell 29**
 
 plt.hist(titanic_preprocessed[:, 2], alpha=0.5,
          label='After discretization')
          
 The third column of titanic_preprocessed is not the discretized Age column. The transformed array starts with the scaled Age and Fare columns, followed by one-hot-encoded categorical features. Therefore, this plot shows the wrong data.
 
-Correction
+### **Correction**
 
 Plot the separate AgeGroup column directly, using a count plot or bar chart to show the number of passengers in each age group.
 Error 3: The plot labeled Before discretization uses the modified Age column.
 
-Code cell 28
+### **Code cell 28**
 
 Because code cell 21 overwrites Age, the code below does not plot the original numerical age distribution.
 plt.hist(data['Age'].dropna(),
          alpha=0.5, label='Before discretization')
          
-Correction
+### **Correction**
 
 Save a copy of the original Age column before discretization, then use that copy for the original histogram.
 Error 4: The age bins exclude age zero.
 
-Code cell 21
+### **Code cell 21**
 
 By default, pd.cut() excludes the lowest boundary. With bins starting at zero, an age of exactly zero becomes a missing value.
 
-Correction
+### **Correction**
 
 data['AgeGroup'] = pd.cut(
     data['Age'],
