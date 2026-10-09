@@ -27,8 +27,21 @@ Batangas State University, Alangilan Campus
 
 ## What we learned
 
-One short paragraph per chapter, Ch1_2_3 to Ch9. Say what the chapter taught
-you and what surprised you. Not what the library does, but what you understood.
+## **Chapter 6: Dealing with Outliers**
+
+I learned that outliers are data points that differ significantly from most values in a dataset and can affect data analysis and machine learning models. I understood how to detect outliers using the Z-score and Interquartile Range (IQR) methods. What surprised me was that a value like 100 could stand out from the other values but still not be detected as an outlier by the Z-score method because its Z-score remained within the range of -3 to 3. I also learned that outliers can be handled through capping, flooring, log transformation, or removal, depending on the situation.
+
+## **Chapter 7: Feature Selection**
+
+I learned that feature selection involves choosing the most relevant features to help a machine learning model make better predictions. I understood that correlation helps identify relationships between variables and that feature selection has three main methods: filter, wrapper, and embedded methods. What surprised me was that each method selects features differently. Filter methods use statistical measures, wrapper methods evaluate combinations based on model performance, and embedded methods select features during model training. This taught me that choosing relevant features can simplify a dataset and help improve model performance.
+
+## **Chapter 8: Constructing a Preprocessing Pipeline**
+
+I learned that a preprocessing pipeline organizes data preparation steps into a sequence that runs automatically. Using the Titanic dataset, I understood how missing values in the Age and Fare columns can be filled using the mean and how StandardScaler standardizes numerical values. I also learned that ColumnTransformer applies different preprocessing steps to selected columns. What surprised me was that these steps could be combined into one reusable process, making data preparation more consistent and reducing manual work before training a machine learning model.
+
+## **Chapter 9: Real-World Application: Data Preprocessing**
+
+I learned how to apply different preprocessing techniques to the Titanic dataset, including handling missing values, scaling numerical features, encoding categorical features, removing irrelevant columns, and grouping ages into categories through discretization. I understood that numerical features such as Age and Fare require different treatments from categorical features such as Sex and Embarked. What surprised me was how much preparation the dataset needed before it could be used for machine learning. I also learned that visualizations and data quality checks help me understand the effects of preprocessing and determine whether the data is ready for model training.
 
 ## Errors we found
 
