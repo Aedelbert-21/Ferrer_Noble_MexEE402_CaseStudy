@@ -77,6 +77,30 @@ The notebook uses five-fold cross-validation with only seven samples. Some valid
 Use a larger dataset. For this small demonstration, reduce the number of folds, while recognizing that the results will still be limited by the small sample size.
 The LassoCV example also uses only seven samples. Its selected features should be treated as illustrative rather than reliable evidence of feature importance.
 
+## **Chapter 8: Constructing a Preprocessing Pipeline**
+
+**File**: Ch8.ipynb
+
+**Issue 1**: The pipeline processes only Age and Fare.
+
+**Code cells 15 to 17**
+
+The ColumnTransformer applies imputation and scaling only to the Age and Fare columns. Other columns are dropped because remainder='drop' is the default setting. This is not a coding error if the goal is to demonstrate numerical preprocessing, but the transformed output does not contain the complete dataset.
+
+**Correction**
+
+If you want to retain other columns, define preprocessing for categorical features or use remainder='passthrough' when appropriate.
+Issue 2: The notebook assumes the uploaded file is named train.csv.
+
+**Code cell 5**
+
+The line pd.read_csv('train.csv') will raise a FileNotFoundError if the uploaded file has a different name.
+
+**Correction**
+
+Confirm that the uploaded filename is train.csv, or use the filename returned by files.upload().
+The main preprocessing steps are valid for the selected numerical columns. The important limitation is that the output contains only the transformed Age and Fare features.
+
 
 ## Note on AI tools
 
