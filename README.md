@@ -15,15 +15,15 @@ Batangas State University, Alangilan Campus
 
 ## Notebook links
 
-| Chapter | Member 1 | Member 2 |
+| Chapter | Ferrer | Noble |
 |---|---|---|
-| Ch1_2_3 | [link]() | [link]() |
-| Ch4 | [link]() | [link]() |
-| Ch5 | [link]() | [link]() |
-| Ch6 | [link]() | [link]() |
-| Ch7 | [link]() | [link]() |
-| Ch8 | [link]() | [link]() |
-| Ch9 | [link]() | [link]() |
+| Ch1_2_3 | [link]() | [[link]()](https://colab.research.google.com/drive/1YQd-56bjY7qgkWE9a77sHb8Uk427NPQn?usp=sharing) |
+| Ch4 | [link]() | [[link]()](https://colab.research.google.com/drive/11adtQlaX19OGzVgIkJAcjJGeOaR4t7O0?usp=sharing) |
+| Ch5 | [link]() | [[link]()](https://colab.research.google.com/drive/1lD6MFHj5AcqQpUNzVqA1QRjyNy5hjd2a?usp=sharing) |
+| Ch6 | [link]() | [[link]()](https://colab.research.google.com/drive/1MBLRuoVB8zCB7m46VLYNAeN27GWCqXBw?usp=sharing) |
+| Ch7 | [link]() | [[link]()](https://colab.research.google.com/drive/1QuWatc898QvArL_eMb-6GcfZmNbzz_5V?usp=sharing) |
+| Ch8 | [link]() | [[link]()](https://colab.research.google.com/drive/19aA4iWVP3nJWevLWUlyhgezVNB26UBB-?usp=sharing) |
+| Ch9 | [link]() | [[link]()](https://colab.research.google.com/drive/123ituOmWqGFF3e2pS3TevfVPShM6Euzu?usp=sharing) |
 
 ## What we learned
 
