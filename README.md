@@ -17,7 +17,7 @@ Batangas State University, Alangilan Campus
 
 | Chapter | Ferrer | Noble |
 |---|---|---|
-| Ch1_2_3 | [link](https://colab.research.google.com/drive/1k3qXB9SRzeKiHNAI5hmcSgvg0ZBz5S2X?usp=sharing) | [[link]()](https://colab.research.google.com/drive/1YQd-56bjY7qgkWE9a77sHb8Uk427NPQn?usp=sharing) |
+| Ch1_2_3 | [link](https://colab.research.google.com/drive/1k3qXB9SRzeKiHNAI5hmcSgvg0ZBz5S2X?usp=sharing) | [link](https://colab.research.google.com/drive/1YQd-56bjY7qgkWE9a77sHb8Uk427NPQn?usp=sharing) |
 | Ch4 | [link](https://colab.research.google.com/drive/1UPZSM9Or6eVB6WVcYavlxxX7zqW210U2?usp=sharing) | [[link]()](https://colab.research.google.com/drive/11adtQlaX19OGzVgIkJAcjJGeOaR4t7O0?usp=sharing) |
 | Ch5 | [link](https://colab.research.google.com/drive/1aK5flu1uj2z7KBLS1lzTraM2q_JXQsxb?usp=sharing) | [[link]()](https://colab.research.google.com/drive/1lD6MFHj5AcqQpUNzVqA1QRjyNy5hjd2a?usp=sharing) |
 | Ch6 | [link](https://colab.research.google.com/drive/12l-LgJG-Eq1UpICozQePVJTWxqjBvnhL?usp=drive_link) | [[link]()](https://colab.research.google.com/drive/1MBLRuoVB8zCB7m46VLYNAeN27GWCqXBw?usp=sharing) |
