@@ -117,7 +117,10 @@ The ColumnTransformer applies imputation and scaling only to the Age and Fare co
 ### **Correction**
 
 If you want to retain other columns, define preprocessing for categorical features or use remainder='passthrough' when appropriate.
-Issue 2: The notebook assumes the uploaded file is named train.csv.
+
+### **Issue 2** 
+
+The notebook assumes the uploaded file is named train.csv.
 
 ### **Code cell 5**
 
