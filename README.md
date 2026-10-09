@@ -47,6 +47,36 @@ The code uses np.abs(z_scores) > 3 to detect outliers. However, the Z-score for 
 Use the IQR method for this example, or adjust the Z-score threshold if justified. Do not assume that every outlier will have a Z-score above 3.
 The IQR method in code cell 11 correctly identifies 100 as an outlier. The main issue in this chapter is the difference between the Z-score result and the written explanation.
 
+**Chapter 7: Feature Selection**
+
+**File**: Ch7.ipynb
+
+**Error 1**: The target variable is included in the selected features.
+
+**Code cells 9 and 10**
+
+The correlation calculation includes final grade, which is the target variable. Its correlation with itself is always 1.0, so the code includes it in relevant_features. This is misleading because the target is what the model should predict, not an input feature.
+
+**Correction**
+
+correlations = df_2.drop(columns='final grade').corrwith(
+    df_2['final grade']
+).sort_values()
+
+relevant_features = correlations[correlations > 0.5]
+print(relevant_features)
+
+**Error 2**: The RFECV results are unreliable with this small dataset.
+
+**Code cells 14 and 15**
+
+The notebook uses five-fold cross-validation with only seven samples. Some validation folds contain too few samples to calculate the R² score reliably, which produces warnings. The selected feature may not generalize well.
+
+**Correction**
+
+Use a larger dataset. For this small demonstration, reduce the number of folds, while recognizing that the results will still be limited by the small sample size.
+The LassoCV example also uses only seven samples. Its selected features should be treated as illustrative rather than reliable evidence of feature importance.
+
 
 ## Note on AI tools
 
