@@ -10,7 +10,7 @@ Batangas State University, Alangilan Campus
 
 | Name | Student Number | Section |
 |---|---|---|
-| Ferrer, Wendell Glen Don| 23- | MEXE-4101 |
+| Ferrer, Wendell Glenn Don V.| 23- | MEXE-4101 |
 | Noble, Aedelbert D. | 23-00737 | MEXE-4101 |
 
 ## Notebook links
