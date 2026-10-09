@@ -101,6 +101,72 @@ The line pd.read_csv('train.csv') will raise a FileNotFoundError if the uploaded
 Confirm that the uploaded filename is train.csv, or use the filename returned by files.upload().
 The main preprocessing steps are valid for the selected numerical columns. The important limitation is that the output contains only the transformed Age and Fare features.
 
+## **Chapter 9: Real-World Application: Data Preprocessing**
+
+File: Ch9.ipynb
+
+Error 1: The original Age column is overwritten during discretization.
+
+Code cell 21
+
+data['Age'] = pd.cut(
+    data['Age'],
+    bins=[0, 12, 50, 200],
+    labels=['Child', 'Adult', 'Elderly']
+)
+
+This replaces the original numerical ages with categories. As a result, the notebook cannot use data['Age'] later to plot the original age distribution.
+
+Correction
+
+data['AgeGroup'] = pd.cut(
+    data['Age'],
+    bins=[0, 12, 50, 200],
+    labels=['Child', 'Adult', 'Elderly']
+)
+
+Keep the original Age column and store the categories in a separate column.
+Error 2: The histogram uses the wrong column for the discretized ages.
+
+Code cell 29
+
+plt.hist(titanic_preprocessed[:, 2], alpha=0.5,
+         label='After discretization')
+         
+The third column of titanic_preprocessed is not the discretized Age column. The transformed array starts with the scaled Age and Fare columns, followed by one-hot-encoded categorical features. Therefore, this plot shows the wrong data.
+
+Correction
+
+Plot the separate AgeGroup column directly, using a count plot or bar chart to show the number of passengers in each age group.
+Error 3: The plot labeled Before discretization uses the modified Age column.
+
+Code cell 28
+
+Because code cell 21 overwrites Age, the code below does not plot the original numerical age distribution.
+plt.hist(data['Age'].dropna(),
+         alpha=0.5, label='Before discretization')
+         
+Correction
+
+Save a copy of the original Age column before discretization, then use that copy for the original histogram.
+Error 4: The age bins exclude age zero.
+
+Code cell 21
+
+By default, pd.cut() excludes the lowest boundary. With bins starting at zero, an age of exactly zero becomes a missing value.
+
+Correction
+
+data['AgeGroup'] = pd.cut(
+    data['Age'],
+    bins=[0, 12, 50, 200],
+    labels=['Child', 'Adult', 'Elderly'],
+    include_lowest=True
+)
+
+This includes zero in the first bin. If age zero must be handled correctly, confirm that the bin boundaries match the intended age groups.
+One additional concern is code cell 33, which uses kde=True to plot Age after converting it to categorical labels. A kernel density estimate is intended for numerical data, so the plot should use the original numerical Age column or omit the KDE when plotting age categories.
+
 
 ## Note on AI tools
 
