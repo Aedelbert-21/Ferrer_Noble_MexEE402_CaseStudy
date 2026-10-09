@@ -210,7 +210,7 @@ One additional concern is code cell 33, which uses kde=True to plot Age after co
 **Noble**
 - The AI tools that used for this case study are Claude and ChatGPT; I've used these AI tools to verify the errors in each chapter that are stated in the Errors we found section in this repository.
 
-  **Wendell**
+**Wendell**
 - I used ChatGPT to review the code outputs in each chapter and verify whether the results were correct. It helped me identify potential errors, inconsistencies between the code and explanations, and possible corrections to improve the accuracy of the notebooks. 
 
 ## References
